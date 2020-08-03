@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+  <tabs>
+    <Tab text="Key Generator">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="290.0" prefWidth="600.0">
+               <children>
+                  <Label layoutX="28.0" layoutY="28.0" text="Parameter A" />
+                  <Label layoutX="28.0" layoutY="75.0" text="Parameter B" />
+                  <Label layoutX="28.0" layoutY="122.0" text="Parameter P" />
+                  <TextField fx:id="txtA" editable="false" layoutX="109.0" layoutY="24.0" prefHeight="25.0" prefWidth="472.0" />
+                  <TextField fx:id="txtB" editable="false" layoutX="109.0" layoutY="71.0" prefHeight="25.0" prefWidth="472.0" />
+                  <TextField fx:id="txtP" editable="false" layoutX="109.0" layoutY="118.0" prefHeight="25.0" prefWidth="472.0" />
+                  <ComboBox fx:id="cb1" layoutX="109.0" layoutY="161.0" onAction="#changeCombo" prefWidth="150.0" promptText="Choose the curve" />
+                  <Label layoutX="28.0" layoutY="165.0" text="Curve" />
+                  <Button fx:id="btn2" layoutX="27.0" layoutY="196.0" mnemonicParsing="false" onAction="#btnaction2" prefHeight="48.0" prefWidth="267.0" text="Generate Public Key" />
+                  <Button fx:id="btn1" layoutX="300.0" layoutY="196.0" mnemonicParsing="false" onAction="#btnaction1" prefHeight="48.0" prefWidth="282.0" text="Generate Private Key" />
+                  <Label layoutX="14.0" layoutY="342.0" text="© Đào Việt Bằng - KLTN 2020" textFill="#616161" AnchorPane.bottomAnchor="14.0">
+                     <font>
+                        <Font size="10.0" />
+                     </font></Label>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Encryption">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="40.0" layoutY="35.0" text="Filename" />
+                  <TextField fx:id="txtE1" layoutX="117.0" layoutY="31.0" prefHeight="25.0" prefWidth="313.0" />
+                  <Button fx:id="btnE1" layoutX="453.0" layoutY="31.0" mnemonicParsing="false" onAction="#btnE1Action" prefHeight="25.0" prefWidth="118.0" text="Choose file" />
+                  <Button fx:id="btnE2" layoutX="453.0" layoutY="72.0" mnemonicParsing="false" onAction="#btnE2Action" prefHeight="25.0" prefWidth="118.0" text="Choose Public key" />
+                  <TextField fx:id="txtE2" layoutX="117.0" layoutY="72.0" prefHeight="25.0" prefWidth="313.0" />
+                  <Label layoutX="40.0" layoutY="76.0" text="Publick Key" />
+                  <Button fx:id="btnE3" layoutX="36.0" layoutY="115.0" mnemonicParsing="false" onAction="#Encrypt" prefHeight="55.0" prefWidth="535.0" text="Encrypt" />
+                  <Label layoutX="439.0" layoutY="178.0" text="© Đào Việt Bằng - KLTN 2020" textFill="#616161">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Decryption">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="40.0" layoutY="35.0" text="Filename" />
+                  <TextField fx:id="txtD1" layoutX="117.0" layoutY="31.0" prefHeight="25.0" prefWidth="313.0" />
+                  <Button fx:id="btnD1" layoutX="453.0" layoutY="31.0" mnemonicParsing="false" onAction="#btnD1Action" prefHeight="25.0" prefWidth="118.0" text="Choose file" />
+                  <Button fx:id="btnD2" layoutX="453.0" layoutY="72.0" mnemonicParsing="false" onAction="#btnD2Action" prefHeight="25.0" prefWidth="118.0" text="Choose Private key" />
+                  <TextField fx:id="txtD2" layoutX="117.0" layoutY="72.0" prefHeight="25.0" prefWidth="313.0" />
+                  <Label layoutX="40.0" layoutY="76.0" text="Private Key" />
+                  <Button fx:id="btnD3" layoutX="36.0" layoutY="115.0" mnemonicParsing="false" onAction="#Decrypt" prefHeight="55.0" prefWidth="535.0" text="Decrypt" />
+                  <Label layoutX="439.0" layoutY="178.0" text="© Đào Việt Bằng - KLTN 2020" textFill="#616161">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+  </tabs>
+</TabPane>
